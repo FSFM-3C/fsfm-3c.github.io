@@ -189,7 +189,7 @@
           \( \mathcal{L}_\mathit{rec}^\mathit{fr} \), while the
           <strong><span class="highlight-yellow">instance discrimination (ID)</span></strong> collaborates
           to promote <em>local-to-global <strong>C</strong>orrespondence</em> through
-          \( \mathcal{L}_\mathit{sim} \). After pretraining, the online encoder 
+          \( \mathcal{L}_\mathit{sim} \). After pretraining, the online encoder \( E_\mathit{o} \)
           (a vanilla ViT) is applied to boost downstream face security tasks.
         </p>
           <!-- First row of images -->
@@ -258,7 +258,7 @@
           <p>
             We integrate different ID paradigms with MIM into FSFM and suggest (c) the local-to-global correspondence via
             elaborate self-distillation: the CRFR-P masked online view introduces spatial variance,
-            the full (unmasked) target view retains complete semantic, and Siamese representation decoders
+            the full (unmasked) target view retains complete semantics, and Siamese representation decoders
             form a disentangled space. In light of this, FSFM structures the encoded space with semantically complete
             facial representations, which endows the encoder with strong facial discriminability.
           </p>
