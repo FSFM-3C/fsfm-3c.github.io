@@ -169,3 +169,54 @@ body {
 .highlight-yellow {
   color: #E17600;
 }
+
+/* 粘顶，宽度由内部 .container 控制（与正文一致），左对齐 */
+.project-switcher{
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* 左对齐“药丸”列表 */
+.switch-list{
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  padding: .5rem 0;
+  margin: 0;
+}
+
+/* 链接默认态：加粗＋大点击区 */
+.project-switcher .tabs a{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .7rem 1.1rem;
+  min-height: 44px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration: none;
+  color: #3f3f46;              /* 深灰文本 */
+  border: 1px solid #e5e7eb;   /* 浅灰描边 */
+  border-radius: 9999px;       /* 药丸圆角 */
+  background: #fafbff;         /* 浅底 */
+  transition: transform .06s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.project-switcher .tabs a:hover{ transform: translateY(-1px); }
+.project-switcher .tabs .icon{ margin-right: .05rem; }
+
+/* 当前页高对比：黑底白字 + 黑色描边 */
+.project-switcher .tabs a[aria-current="page"]{
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* 键盘可达性 */
+.project-switcher .tabs a:focus{
+  outline: 3px solid rgba(59,130,246,.55);
+  outline-offset: 2px;
+}

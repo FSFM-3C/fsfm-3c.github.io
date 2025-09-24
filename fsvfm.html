@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<!-- Top nav: FS-VFM active -->
+<nav class="project-switcher">
+  <div class="container">
+    <div class="tabs is-large">
+      <ul class="switch-list">
+        <li>
+          <a href="./index.html">
+            <span class="icon is-small"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <span><strong>FSFM</strong> <small>(CVPR25)</small></span>
+          </a>
+        </li>
+        <li>
+          <a href="./fsvfm.html" aria-current="page">
+            <span class="icon is-small"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+            <span><strong>FS-VFM</strong> <small>(FSFM Extension)</small></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection">
+  <meta name="keywords" content="FSFM, FS-VFM, facial representation learning, face security, deepfake detection, diffuion facial forgery detection, face anti-spoofing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size: 2.3rem;">
+             Scalable Face Security Vision Foundation Model <br> for Deepfake, Diffusion, and Spoofing Detection</h1>
+          <div class="is-size-5 publication-authors">
+            <strong style="font-size: 24px">Extended version of FSFM (CVPR 2025)</strong>
+            <br>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=tpP4cFQAAAAJ&view_op=list_works&sortby=pubdate">Gaojian Wang</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://flin.group/">Feng Lin</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://flin.group/">Tong Wu</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://mason.gmu.edu/~zyan4/">Zhisheng Yan</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=uuQA_rcAAAAJ&hl=zh-CN&oi=sra">Kui Ren</a><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>State Key Laboratory of Blockchain and Data Security, Zhejiang University</span>
+            <span class="author-block"><sup>2</sup>Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security</span><br>
+            <span class="author-block"><sup>3</sup>George Mason University</span><br>
+          </div>
+
+          <strong style="font-size: 24px">Coming Soon :)</strong>
+
+<!--          <div class="column has-text-centered">-->
+<!--            <div class="publication-links">-->
+<!--              &lt;!&ndash; PDF Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/pdf/2412.12032"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; arXiv Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/abs/2412.12032"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/wolo-wolo/FSFM"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                  </span>-->
+<!--                  <span>Code</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Model Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://huggingface.co/Wolowolo/fsfm-3c"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span>🤗 Model</span>-->
+<!--                  </a>-->
+<!--              </span> <br>-->
+<!--              &lt;!&ndash; Demo Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://huggingface.co/spaces/Wolowolo/FSFM-3C_facial_masking_for_MIM"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span>🤗 Facial Masking Demo</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Demo Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://huggingface.co/spaces/Wolowolo/FSFM-deepfake_diffusion_spoof_face_detection"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span>🤗 Detection Demo</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop has-text-centered">-->
+<!--    <div class="hero-body">-->
+<!--      <div class="content has-text-justified">-->
+<!--        <p>-->
+<!--          <b>TL;DR</b>: A self-supervised pre-training framework to learn a transferable facial representation that-->
+<!--          boosts various face security tasks: cross-dataset deepfake detection, cross-domain face anti-spoofing,-->
+<!--          and unseen diffusion facial forgery detection.<br>-->
+<!--        </p>-->
+<!--      <video id="teaser" autoplay muted playsinline width="100%">-->
+<!--        <source src="./static/videos/teaser-FSFM.mp4"-->
+<!--                type="video/mp4">-->
+<!--      </video>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Abstract</h2>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            This work asks: with abundant, unlabeled real faces, how to learn a robust and transferable facial-->
+<!--            representation that boosts various face security tasks with respect to generalization performance?-->
+<!--            We make the first attempt and propose a self-supervised pretraining framework to learn fundamental-->
+<!--            representations of real face images, <b>FSFM</b>, that leverages the synergy between masked image-->
+<!--            modeling (MIM) and instance discrimination (ID). We explore various facial masking strategies-->
+<!--            for MIM and present a simple yet powerful CRFR-P masking, which explicitly forces the model to capture-->
+<!--            meaningful intra-region <b>C</b>onsistency and challenging inter-region <b>C</b>oherency.-->
+<!--            Furthermore, we devise the ID network that naturally couples with MIM to establish underlying-->
+<!--            local-to-global <b>C</b>orrespondence via tailored self-distillation. These three learning objectives,-->
+<!--            namely <b>3C</b>, empower encoding both local features and global semantics of real faces.-->
+<!--            After pretraining, a vanilla ViT serves as a universal vision <b>F</b>oundation <b>M</b>odel for downstream-->
+<!--            <b>F</b>ace <b>S</b>ecurity tasks: cross-dataset deepfake detection, cross-domain face anti-spoofing,-->
+<!--            and unseen diffusion facial forgery detection.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;/ Abstract. &ndash;&gt;-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="section">-->
+<!--    <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; Method overview. &ndash;&gt;-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Overview</h2>-->
+<!--        <div class="content has-text-justified">-->
+<!--        <p>-->
+<!--          The self-supervised pretraining framework for learning fundamental representations of real faces-->
+<!--          (<em><strong>3C</strong></em>💣). Guided by the-->
+<!--          <strong><span class="highlight-red">CRFR-P masking</span></strong> strategy, the-->
+<!--          <strong><span class="highlight-blue">masked image modeling (MIM)</span></strong> captures-->
+<!--          <em>intra-region <strong>C</strong>onsistency</em> with \( \mathcal{L}_\mathit{rec}^\mathit{m} \)-->
+<!--          and enforces <em>inter-region <strong>C</strong>oherency</em> via-->
+<!--          \( \mathcal{L}_\mathit{rec}^\mathit{fr} \), while the-->
+<!--          <strong><span class="highlight-yellow">instance discrimination (ID)</span></strong> collaborates-->
+<!--          to promote <em>local-to-global <strong>C</strong>orrespondence</em> through-->
+<!--          \( \mathcal{L}_\mathit{sim} \). After pretraining, the online encoder \( E_\mathit{o} \)-->
+<!--          (a vanilla ViT) is applied to boost downstream face security tasks.-->
+<!--        </p>-->
+<!--          &lt;!&ndash; First row of images &ndash;&gt;-->
+<!--          <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">-->
+<!--            <img src="./static/images/framework_deep.jpg" class="center" style="max-width: 90%;">-->
+<!--          </div>-->
+<!--        <p>-->
+<!--          Given an input image \( I \), the CRFR-P strategy generates a facial region mask-->
+<!--          \( M_\mathit{fr} \) and an image mask \( M \). The MIM network, a masked autoencoder, reconstructs-->
+<!--          the masked face \( I_\mathit{m} \) from visible patches \( x_\mathit{v} \) (masked by \( M \)),-->
+<!--          with an emphasis on the fully masked region \( I_\mathit{m}^\mathit{fr} \) (specified by \( M_\mathit{fr} \)).-->
+<!--          The ID network maximizes the representation similarity between the masked online view and the-->
+<!--          unchanged target view of the same sample by projection upon a disentangled space structured by-->
+<!--          Siamese rep decoders.-->
+<!--        </p>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; Results &ndash;&gt;-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Method</h2>-->
+<!--        <h3 class="title is-5">An Empirical Study of Facial Masking Strategies in MIM</h3>-->
+<!--        <div class="content has-text-justified">-->
+<!--          &lt;!&ndash; First row of images &ndash;&gt;-->
+<!--          <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">-->
+<!--            <img src="./static/images/masking_strategies.jpg" class="center" style="max-width: 48%;">-->
+<!--            <img src="./static/images/masked_results.jpg" class="center" style="max-width: 48%;">-->
+<!--          </div>-->
+<!--          &lt;!&ndash; Second row of images &ndash;&gt;-->
+<!--          <div style="display: flex; justify-content: center; gap: 20px;">-->
+<!--            <img src="./static/images/mask_analysis.jpg" class="center" style="max-width: 48%;">-->
+<!--            <img src="./static/images/att_map_mask_stra.jpg" class="center" style="max-width: 48%;">-->
+<!--          </div>-->
+<!--          <p>-->
+<!--              &lt;!&ndash; Demo Link. &ndash;&gt;-->
+<!--            <p class="has-text-centered">-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://huggingface.co/spaces/Wolowolo/FSFM-3C_facial_masking_for_MIM"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span>🤗 Masking Strategies Demo</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              <br>-->
+<!--          </p>-->
+<!--          <p class="content has-text-justified">-->
+<!--              We delve into the impact of different facial masking strategies on the MIM pre-training, including quantitative and-->
+<!--              qualitative analyses of attention differences. The proposed CRFR-P masking effectively directs-->
+<!--              attention to critical facial regions with appropriate range and diversity for both intra-region consistency-->
+<!--              and inter-region coherency, enabling the pretrained facial model to avoid trivial solutions (shortcuts) and-->
+<!--              capture the intrinsic properties of real faces.-->
+<!--              <br>-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <h3 class="title is-5">The ID Network for Local-to-Global Self-Distillation</h3>-->
+<!--        <div class="content has-text-justified">-->
+<!--          &lt;!&ndash; First row of images &ndash;&gt;-->
+<!--          <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">-->
+<!--            <img src="./static/images/target_view.jpg" class="center" style="max-width: 85%;">-->
+<!--          </div>-->
+<!--          <p>-->
+<!--            We integrate different ID paradigms with MIM into FSFM and suggest (c) the local-to-global correspondence via-->
+<!--            elaborate self-distillation: the CRFR-P masked online view introduces spatial variance,-->
+<!--            the full (unmasked) target view retains complete semantics, and Siamese representation decoders-->
+<!--            form a disentangled space. In light of this, FSFM structures the encoded space with semantically complete-->
+<!--            facial representations, which endows the encoder with strong facial discriminability.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; Results &ndash;&gt;-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Results</h2>-->
+<!--        <h3 class="subtitle is-6">Generalization performance on downstream face security tasks: cross-dataset-->
+<!--          deepfake detection (top), cross-domain face anti-spoofing (left bottom),-->
+<!--          and unseen diffusion facial forgery detection (right bottom).</h3>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">-->
+<!--            <img src="./static/images/DfD.jpg" class="center" style="max-width: 80%;">-->
+<!--          </div>-->
+<!--          <div style="display: flex; justify-content: center; gap: 20px;">-->
+<!--            <img src="./static/images/FAS.jpg" class="center" style="width: 55%; height: auto; object-fit: contain;">-->
+<!--            <img src="./static/images/DiFF.jpg" class="center" style="width: 40%; height: auto; object-fit: contain;">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <h3 class="subtitle is-6">Visualizations of Reconstruction (left) and CAM (right).</h3>-->
+<!--          <div class="content has-text-justified">-->
+<!--            <div style="display: flex; justify-content: center; gap: 20px;">-->
+<!--              <img src="./static/images/resconstuction.jpg" class="center" style="width: 45%; height: auto; object-fit: contain;">-->
+<!--              <img src="./static/images/vis_CAM.jpg" class="center" style="width: 55%; height: auto; object-fit: contain;">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@article{wang2024fsfm,-->
+<!--  title={FSFM: A Generalizable Face Security Foundation Model via Self-Supervised Facial Representation Learning},-->
+<!--  author={Wang, Gaojian and Lin, Feng and Wu, Tong and Liu, Zhenguang and Ba, Zhongjie and Ren, Kui},-->
+<!--  journal={arXiv preprint arXiv:2412.12032},-->
+<!--  year={2024}-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          </div>
+        </div>
+        <a href="https://mapmyvisitors.com/web/1bxvh" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?cl=ffffff&w=a&t=tt&d=1nUoTTQz0BXhp7T5dFnB1j9r2pX7sCHleOHRdYAkeII" /></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
