@@ -27,10 +27,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection">
-  <meta name="keywords" content="FSFM, FS-VFM, facial representation learning, face security, deepfake detection, diffuion facial forgery detection, face anti-spoofing">
+        content="FS-VFM extension: Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection">
+  <meta name="keywords" content="FS-VFM, FSFM extension, face security foundation model, self-supervised facial representation learning, generalized deepfake detection, cross-domain face anti-spoofing, diffusion facial forensics, efficient adaptation for face security">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection</title>
+  <link rel="canonical" href="https://fsfm-3c.github.io/fsvfm.html">
+
+  <meta name="citation_title" content="Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection">
+  <meta name="citation_author" content="Gaojian Wang">
+  <meta name="citation_author" content="Feng Lin">
+  <meta name="citation_author" content="Tong Wu">
+  <meta name="citation_author" content="Zhisheng Yan">
+  <meta name="citation_author" content="Kui Ren">
+  <meta name="citation_publication_date" content="2025/10/12">
+  <meta name="citation_arxiv_id" content="2510.10663">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2510.10663">
+  <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2510.10663">
+  <meta name="citation_keywords" content="FS-VFM extension; face security foundation model; self-supervised facial representation learning; generalized deepfake detection; cross-domain face anti-spoofing; diffusion facial forensics; efficient adaptation for face security">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fsfm-3c.github.io/fsvfm.html">
+  <meta property="og:title" content="FS-VFM Extension: Scalable Face Security Vision Foundation Model">
+  <meta property="og:description" content="The scalable FS-VFM extension and arXiv technical report for deepfake, diffusion, and spoofing detection.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ScholarlyArticle",
+        "headline": "Scalable Face Security Vision Foundation Model for Deepfake, Diffusion, and Spoofing Detection",
+        "datePublished": "2025-10-12",
+        "identifier": "arXiv:2510.10663",
+        "author": [
+          {"@type": "Person", "name": "Gaojian Wang"},
+          {"@type": "Person", "name": "Feng Lin"},
+          {"@type": "Person", "name": "Tong Wu"},
+          {"@type": "Person", "name": "Zhisheng Yan"},
+          {"@type": "Person", "name": "Kui Ren"}
+        ],
+        "url": "https://fsfm-3c.github.io/fsvfm.html",
+        "mainEntityOfPage": "https://arxiv.org/abs/2510.10663",
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://arxiv.org/pdf/2510.10663",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "FS-VFM extension",
+          "face security foundation model",
+          "self-supervised facial representation learning",
+          "generalized deepfake detection",
+          "cross-domain face anti-spoofing",
+          "diffusion facial forensics",
+          "efficient adaptation for face security"
+        ]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "FS-VFM",
+        "codeRepository": "https://github.com/wolo-wolo/FSFM-CVPR25/tree/FSVFM-extension-R1",
+        "url": "https://fsfm-3c.github.io/fsvfm.html",
+        "sameAs": [
+          "https://huggingface.co/Wolowolo/fsfm-3c",
+          "https://huggingface.co/datasets/Wolowolo/DF_DiFF_FAS_dataset_in_FSFM_FSVFM"
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -112,7 +177,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/wolo-wolo/FSFM-CVPR25/tree/FSVFM-extension"
+                <a href="https://github.com/wolo-wolo/FSFM-CVPR25/tree/FSVFM-extension-R1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -122,9 +187,15 @@
               </span>
               <!-- Model Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/Wolowolo/fsfm-3c/tree/main/pretrained_models"
+                <a href="https://huggingface.co/Wolowolo/fsfm-3c"
                    class="external-link button is-normal is-rounded is-dark">
                   <span>🤗 Model</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Wolowolo/DF_DiFF_FAS_dataset_in_FSFM_FSVFM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗 Dataset</span>
                   </a>
               </span> <br>
               <!-- Demo Link. -->
@@ -215,7 +286,7 @@
     <!-- Results -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Cross-Dataset Deeofake Detection</h2>
+        <h2 class="title is-3">Cross-Dataset Deepfake Detection</h2>
         <h3 class="title is-5">Comparison with existing VFMs</h3>
           <div class="figure" style="text-align: center; margin-bottom: 15px;">
             <img src="./static/images/fsvfm/DFD_VFMs.png" alt="Cross-dataset Deepfake Detection Table"
